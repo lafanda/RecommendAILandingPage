@@ -1,4 +1,12 @@
 import React from 'react';
+
+import Nav from './components/layout/Nav';
+
+function App() {
+  return (
+    <div>
+      <Nav/>
+
 import NavBar from './components/layout/NavBar';
 import DownloadButton from "./components/reusables/DownloadButton";
 
