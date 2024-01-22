@@ -1,19 +1,19 @@
 import React from 'react'
 import "./LayoutStyle.css"
 import Logo from "../../images/Logo.png"
+import DownloadButton from '../reusables/DownloadButton'
 
 function Nav() {
   return (
     <div>
       <div className="container">
-    <header className="d-flex justify-content-between py-3">
+    <header className="justify-content-between py-3">
 
-      <ul className="nav nav-pills">
+      <ul className="nav nav-pills  justify-content-between">
 
-        <a className = "nav-item logo" href="/"><img className = "logo" src = {`${Logo}`}></img></a>
-        <li className="nav-item navStyle"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li className="nav-item"><a href="#" class="nav-link">Features</a></li>
-
+        <a className = "nav-item" href="/"><img className = "logo col-lg-3 col-sm-3 col-3 logo rounded-5" src = {`${Logo}`}></img></a>
+        <button className = "navStyle buttonStyle nav-link">Try Me</button>
+    
       </ul>
 
     </header>

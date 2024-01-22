@@ -1,7 +1,22 @@
-.logo{
-    width:5.5vw;
-}
 
 .navStyle{
     padding-top: 0.6vh;
 }
+
+ 
+.buttonStyle:hover{
+    box-shadow: 0px 0px 12px rgba(187, 254, 255,1);
+    color: white;
+}
+
+.logo:hover{
+    box-shadow: 0px 0px 12px rgba(187, 254, 255,1);
+
+}
+
+.buttonStyle {
+    background-color: rgb(68, 60, 60);
+    color: white;
+
+}
+
