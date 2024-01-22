@@ -1,11 +1,13 @@
 import React from 'react';
 import NavBar from './components/layout/NavBar';
+import DownloadButton from "./components/reusables/DownloadButton";
 
 
 function App() {
   return (
-    <div>
-      <NavBar/>
+    <div >
+      <DownloadButton brand = 'google-play'/>
+        <DownloadButton brand = 'apple'/>
     </div>
   );
 }
