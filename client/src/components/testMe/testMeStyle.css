@@ -39,6 +39,9 @@ body {
       opacity: 0;
     }
   }
+  .userText{
+    font-weight: normal;
+  }
   
 
 
