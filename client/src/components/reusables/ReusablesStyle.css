@@ -1,36 +1,78 @@
-.download-buttons {
-    display: flex;
-    gap: 10px;
-    padding-bottom: 40px;
-}
 
-.download-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    width: 180px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 .download-btn.apple {
-    color: black;
-    background-color: rgba(249, 255, 241, 0.9);
+    position: relative;
+    letter-spacing: .1em;
+    background: linear-gradient(35deg, #CF995F, transparent );
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6c6b6b;
+    padding: 10px 30px;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.8s, box-shadow 0.8s;
+    border-radius: 12px;
 }
 
 .download-btn.google-play {
-    color: black;
-    background-color: #faf6ff;
+    position: relative;
+    letter-spacing: .1em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6c6b6b;
+    background: linear-gradient(35deg, #ad8ca7, transparent );
+    padding: 10px 30px;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.8s, box-shadow 0.8s;
+    border-radius: 12px;
+}
+.download-btn.apple:hover {
+    color: #fff;
+    border-color: #ffffff;
+    box-shadow:
+            0 0 1px #ffffff,
+            0 0 2px #fff1e1,
+            0 0 4px #ffe4cb,
+            0 0 8px  #CF995F,
+            0 0 16px rgba(255, 163, 81, 0.8);
 }
 
 .download-btn.google-play:hover {
-    background-color: #efe6ff;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border-color: #ffffff;
+    box-shadow:
+            0 0 1px #ffffff,
+            0 0 2px #ffe6f7,
+            0 0 4px #ffc2f4,
+            0 0 8px #ff9eeb,
+            0 0 16px rgb(255, 152, 235);
+}
+.download-btn.apple::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 0;
+    height: 100%;
+    background:  #CF995F;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 0.5s;
 }
 
-.download-btn.apple:hover {
-    background-color: rgba(249, 255, 233, 0.9);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+.download-btn.google-play::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 0;
+    height: 100%;
+    background: #ad8ca7;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 0.5s;
+}
+.download-btn:hover:before {
+    width: 100%;
 }
