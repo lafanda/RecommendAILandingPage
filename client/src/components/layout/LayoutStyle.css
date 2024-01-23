@@ -17,6 +17,13 @@
 .buttonStyle {
     background-color: rgb(68, 60, 60);
     color: white;
-
 }
 
+.Copywrite{
+    font-size: 9px;
+    color: #b6b6b6;
+}
+
+.FooterSub{
+    font-size: 14px;
+}

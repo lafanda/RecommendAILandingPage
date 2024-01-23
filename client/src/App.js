@@ -1,21 +1,16 @@
 import React from 'react';
-
-import Nav from './components/layout/Nav';
-
-function App() {
-  return (
-    <div>
-      <Nav/>
-
-import NavBar from './components/layout/NavBar';
-import DownloadButton from "./components/reusables/DownloadButton";
+import Welcome from "./components/welcome/Welcome";
+import Footer from "./components/layout/Footer";
+import Nav from "./components/layout/Nav";
 
 
 function App() {
   return (
     <div >
-      <DownloadButton brand = 'google-play'/>
-        <DownloadButton brand = 'apple'/>
+        <Nav/>
+         <Welcome/>
+        <Footer/>
+
     </div>
   );
 }
