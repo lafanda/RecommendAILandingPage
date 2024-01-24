@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const openai = new OpenAI({
-    apiKey:
+    apiKey:"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"
 })
 
 app.post("/askQuestion", async (req, res) => {

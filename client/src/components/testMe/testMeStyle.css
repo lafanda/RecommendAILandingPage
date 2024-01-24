@@ -44,7 +44,13 @@ body {
   }
   
 
-
+#Forum{
+  position: relative;
+  z-index: 2;
+  padding: 5vh 0;
+  width: 100vw;
+  background-color: #4f474c;
+}
 
   
   .fakeScreen {

@@ -4,24 +4,15 @@ import Logo from "../../images/Logo.png"
 import DownloadButton from '../reusables/DownloadButton'
 
 function Nav() {
-  return (
-    <div>
-      <div className="container">
-    <header className="justify-content-between py-3">
+    return (
+        <nav className="navbar">
+            <a className="navbar-brand mx-3 d-flex align-items-center" href="#">
+                <img src={`${Logo}`} width="50" height="50" className="d-inline-block align-top mr-2 logo" alt=""/>
+                <h2 className="mb-0 ml-5 nav-title">RecommendAI</h2>
+            </a>
+        </nav>
 
-      <ul className="nav nav-pills  justify-content-between">
-
-        <a className = "nav-item" href="/"><img className = "logo col-lg-3 col-sm-3 col-3 logo rounded-5" src = {`${Logo}`}></img></a>
-        <button className = "navStyle buttonStyle nav-link">Try Me</button>
-    
-      </ul>
-
-    </header>
-  </div>
-
-
-    </div>
-  )
+    )
 }
 
 export default Nav

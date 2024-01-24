@@ -1,23 +1,23 @@
 import React from 'react';
 import DownloadButton from "../reusables/DownloadButton";
 import "./WelcomeStyle.css"
+import Phone from "../../images/phone.png"
 
 function Welcome() {
     return (
-        <section id={"Welcome"}  className={"text-bg-dark"}>
+        <section id={"Welcome"}>
             <div className={"container justify-content-center "}>
-                <h1 className={"text-center"}>RecommendAI</h1>
-                <p className={"subHeading text-center pb-5"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
                 <div className={"row"}>
-                    <div className={"col-md-6 d-flex justify-content-center"}>
+                    <div className={'col-md-6'}>
+                        <h1 className={"sHeading pb-5 "}>Re-Discover What You Love With Personalized AI Recommendations</h1>
                         <DownloadButton brand='google-play'/>
-                    </div>
-                    <div className={"col-md-6 d-flex justify-content-center"}>
                         <DownloadButton brand='apple'/>
                     </div>
-
+                    <div className={" col-md-6"}>
+                        <img className=" phone" src={`${Phone}`} alt=""/>
+                    </div>
                 </div>
+
             </div>
 
 

@@ -1,6 +1,16 @@
 #Welcome{
-    padding: 17.5vh 0;
+    padding-top: 17.5vh;
 }
-.subHeading{
-    color: #b6b6b6;
+.heading{
+    color: white;
+}
+.sHeading{
+    color: #b7b7b7;
+}
+.phone{
+    z-index: 1;
+    height: 600px;
+    width: auto;
+    transform: rotate(5deg);
+    margin-bottom: -150px;
 }

@@ -8,8 +8,8 @@ library.add( fab);
 function DownloadButton(props) {
 
     return (
-        <section>
-            <div className="download-buttons">
+        <section className={"pb-4"}>
+            <div className="download-buttons ">
                 <button className={`download-btn ${props.brand}`}> <FontAwesomeIcon icon={['fab', `${props.brand}`]} /> Download </button>
             </div>
         </section>
