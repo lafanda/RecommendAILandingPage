@@ -7,8 +7,8 @@ function Nav() {
     return (
         <nav className="navbar">
             <a className="navbar-brand mx-3 d-flex align-items-center" href="#">
-                <img src={`${Logo}`} width="50" height="50" className="d-inline-block align-top mr-2 logo" alt=""/>
-                <h2 className="mb-0 ml-5 nav-title">RecommendAI</h2>
+                <img src={`${Logo}`} width="66" height="65" className="d-inline-block align-top mr-2 logo" alt=""/>
+                <h1 className="mb-0 ml-5 nav-title">RecommendAI</h1>
             </a>
         </nav>
 

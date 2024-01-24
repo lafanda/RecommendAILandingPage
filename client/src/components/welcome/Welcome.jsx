@@ -7,15 +7,17 @@ function Welcome() {
     return (
         <section id={"Welcome"}>
             <div className={"container justify-content-center "}>
-                <div className={"row"}>
-                    <div className={'col-md-6'}>
-                        <h1 className={"sHeading pb-5 "}>Re-Discover What You Love With Personalized AI Recommendations</h1>
+
+                <h1 className={"sHeading pb-5 text-center"}>Re-Discover What You Love With Personalized AI Recommendations</h1>
+                <div className={"row text-center"}>
+                    <div className={"col-md-6"}>
                         <DownloadButton brand='google-play'/>
+                    </div>
+                    <div className={"col-md-6"}>
                         <DownloadButton brand='apple'/>
                     </div>
-                    <div className={" col-md-6"}>
-                        <img className=" phone" src={`${Phone}`} alt=""/>
-                    </div>
+
+
                 </div>
 
             </div>

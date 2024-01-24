@@ -1,0 +1,24 @@
+.phoneS {
+    width: auto; /* Adjust as needed */
+    height: 500px; /* Adjust as needed */
+    z-index: 1; /* Lower z-index since these are in the back */
+
+
+}
+
+.phoneM {
+    width: auto; /* Adjust as needed */
+    height: 550px; /* Adjust as needed and make taller than .phoneS */
+    z-index: 2; /* Higher z-index to bring it to the front */
+
+}
+.phoneHeader{
+    color: #d7d7d7;
+    font-size: 36px;
+}
+
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

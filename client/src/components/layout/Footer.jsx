@@ -15,7 +15,7 @@ function Footer() {
                         <h5 className={"FooterSub"}>Innovating How You Discover What You Love</h5>
                     </div>
                 </div>
-                <div className="col-md-6 pt-4">
+                <div className="text-center pt-4">
                     <h5 className={"Copywrite"}>(c) 2024 RecommendAI — All rights reserved</h5>
                 </div>
             </div>

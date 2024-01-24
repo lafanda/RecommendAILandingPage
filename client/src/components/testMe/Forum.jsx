@@ -61,7 +61,7 @@ function Forum() {
             <div className="fakeScreen rounded-3 col-lg-10" id="terminalWindow" onClick={handleFakeScreenClick}>
 
                 <div>
-                    <p className="line1">Ask me a question</p>
+                    <p className="line1">Ask me for a song recommendation</p>
                     <span className="fs-5 fw-normal pb-0">
                     {conversation.map((entry, index) => (
                         <div key={index} className={"userText"}>

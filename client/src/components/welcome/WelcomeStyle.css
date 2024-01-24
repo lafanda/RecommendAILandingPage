@@ -7,10 +7,3 @@
 .sHeading{
     color: #b7b7b7;
 }
-.phone{
-    z-index: 1;
-    height: 600px;
-    width: auto;
-    transform: rotate(5deg);
-    margin-bottom: -150px;
-}
