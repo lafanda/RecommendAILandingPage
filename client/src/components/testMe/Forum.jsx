@@ -20,7 +20,7 @@ function Forum() {
 
     function handleKeyPress(e) {
         if (e.key === "Enter") {
-            setConversation(conv => [...conv,  inputValue]);
+            setConversation(conv => [...conv, inputValue]);
             e.preventDefault();
             setInputValue("");
             submitData();
@@ -35,7 +35,7 @@ function Forum() {
             });
 
             if (response.status === 200) {
-                setConversation(conv => [...conv,  response.data.modifiedMessage] );
+                setConversation(conv => [...conv, response.data.modifiedMessage]);
             } else {
                 alert("Server responded with a non-success status");
             }
@@ -43,7 +43,6 @@ function Forum() {
             alert("An error occurred: " + e.message);
         }
     }
-
 
 
     useEffect(() => {
@@ -56,29 +55,30 @@ function Forum() {
     }, []);
 
 
-    return (<div className="container">
+    return (
+        <section id={"Forum"} >
+            <div className="container">
+            <div className="fakeScreen rounded-3 col-lg-10" id="terminalWindow" onClick={handleFakeScreenClick}>
 
-        <div className="fakeScreen rounded-3 col-lg-10" id="terminalWindow" onClick={handleFakeScreenClick}>
-
-            <div>
-                <p className="line1">Ask me a question</p>
-                <span className="fs-5 fw-normal pb-0">
+                <div>
+                    <p className="line1">Ask me for a song recommendation</p>
+                    <span className="fs-5 fw-normal pb-0">
                     {conversation.map((entry, index) => (
                         <div key={index} className={"userText"}>
                             {entry}
                         </div>
                     ))}
-                    <span className="userText pt-0"> {inputValue}</span>
+                        <span className="userText pt-0"> {inputValue}</span>
                     <span className="cursor fw-bold ">_</span>
                 </span>
 
-            </div>
+                </div>
 
-            <input
-                id="hiddenInput"
-                type="text"
-                className={"invisibleInput"}
-                value={inputValue}
+                <input
+                    id="hiddenInput"
+                    type="text"
+                    className={"invisibleInput"}
+                    value={inputValue}
                     onChange={handleInputChange}
                     onKeyDown={handleKeyPress}
                     autoComplete="off"  // Disables autocomplete
@@ -88,10 +88,10 @@ function Forum() {
                 />
 
 
+            </div>
+            </div>
 
-        </div>
-
-    </div>)
+        </section>)
 }
 
 export default Forum

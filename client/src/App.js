@@ -3,6 +3,7 @@ import Nav from './components/layout/Nav';
 import Forum from './components/testMe/Forum';
 import Welcome from "./components/welcome/Welcome";
 import Footer from "./components/layout/Footer";
+import Phones from "./components/phones/Phones";
 
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
          <Nav/>
          <Welcome/>
          <Forum/>
+        <Phones/>
          <Footer/>
+
     </div>
   );
 }
