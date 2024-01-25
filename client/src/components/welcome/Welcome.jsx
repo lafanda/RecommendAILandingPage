@@ -1,7 +1,6 @@
 import React from 'react';
 import DownloadButton from "../reusables/DownloadButton";
 import "./WelcomeStyle.css"
-import Phone from "../../images/phone.png"
 
 function Welcome() {
     return (
