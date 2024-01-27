@@ -1,6 +1,12 @@
 import express from "express";
+import dotenv from 'dotenv'
+dotenv.config();
+import path from "path";
+import { fileURLToPath } from 'url';
 import bodyParser from "body-parser";
-import OpenAI from "openai";
+import OpenAI from 'OpenAI';
+
+
 
 const app = express();
 const port = 4000;
@@ -8,18 +14,35 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 const openai = new OpenAI({
-    apiKey:
-})
+    apiKey: process.env.OPENAI_API,
+  });
+
+
 
 app.post("/askQuestion", async (req, res) => {
-    const data = req.body;
-    const modifiedData = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
-        message: [{"role": "user", "content":"hello who are you"}],
-        max_tokens: 10
-    });
-    res.status(200).json(modifiedData.data.choices[0].text);
+    const sendMessage = req.body.message;
+  
+  const stream = await openai.chat.completions.create({
+    model: 'gpt-4',
+    messages: [{ role: 'user', content: `${sendMessage}` }],
+    stream: true,
+  });
+
+  let respondMessage  = '';
+
+  for await (const chunk of stream) {
+    respondMessage += chunk.choices[0]?.delta?.content || '';
+     //respondMessage = process.stdout.write(chunk.choices[0]?.delta?.content || '');
+    
+  }
+  const data = {respondMessage: respondMessage}
+  res.send(data);
+
+
+    
+   
 });
 
 

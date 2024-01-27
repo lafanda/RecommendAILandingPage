@@ -7,7 +7,7 @@ function Forum() {
 
 
     const [inputValue, setInputValue] = useState("");
-    const [conversation, setConversation] = useState([]);
+    const [conversation, setConversation] = useState([{}]);
 
     function handleFakeScreenClick() {
         document.getElementById("hiddenInput").focus();
@@ -20,7 +20,10 @@ function Forum() {
 
     function handleKeyPress(e) {
         if (e.key === "Enter") {
-            setConversation(conv => [...conv,  inputValue]);
+            setConversation(conv => [...conv, 
+                {text: inputValue,
+                type: "user"
+                }]);
             e.preventDefault();
             setInputValue("");
             submitData();
@@ -29,18 +32,21 @@ function Forum() {
     }
 
     async function submitData() {
+       
         try {
+            
             const response = await axios.post('/askQuestion', {
                 message: inputValue
             });
 
             if (response.status === 200) {
-                setConversation(conv => [...conv,  response.data.modifiedMessage] );
+                setConversation(conv => [...conv,  {text:response.data.respondMessage, type: "response"}] );
+            
             } else {
-                alert("Server responded with a non-success status");
+                //alert("Server responded with a non-success status");
             }
         } catch (e) {
-            alert("An error occurred: " + e.message);
+           // alert("An error occurred: " + e.message);
         }
     }
 
@@ -64,8 +70,17 @@ function Forum() {
                 <p className="line1">Ask me a question</p>
                 <span className="fs-5 fw-normal pb-0">
                     {conversation.map((entry, index) => (
-                        <div key={index} className={"userText"}>
-                            {entry}
+                        <div key={index} className={` ${entry.type=='response' ? "responseText" : 'userText'}`} 
+                        
+                        style={{
+                            animationDelay: `${index * 1}s`,
+                            // 1 second delay increment per message. Adjust as needed.
+                        }}
+                        
+                            >
+                            
+                            {entry.text}
+                        
                         </div>
                     ))}
                     <span className="userText pt-0"> {inputValue}</span>
