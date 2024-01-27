@@ -1,6 +1,5 @@
 body {
     background-color: #272727;
-    padding: 10px;
   }
 
   .invisibleInput {
@@ -44,26 +43,36 @@ body {
   }
   
 
-
+#Forum{
+  position: relative;
+  padding: 20vh 0 20vh 0;
+  width: 100vw;
+}
+.tryOutHeader{
+  color: #b9b9b9;
+}
 
   
   .fakeScreen {
-    background-color: #151515;
+    min-height: 250px;
+    background-color: #2d2d2d;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 20px;
-    height: 500px;  
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
     user-select: none; 
     -webkit-user-select: none; 
     -moz-user-select: none; 
-    -ms-user-select: none; 
+    -ms-user-select: none;
+    background-color: #151515;
+    filter:
+    drop-shadow(0 0 25px rgba(174, 163, 203, 0.9))
+    drop-shadow(0 0 100px #7c7c7c);
   }
   
   p {
     position: relative;
-    
     text-align: left;
     font-size: 1.25em;
     font-family: monospace;
@@ -199,24 +208,24 @@ body {
   
   @-webkit-keyframes type {
     to {
-      width: 17em;
+      width: 20em;
     }
   }
   
   @-moz-keyframes type {
     to {
-      width: 17em;
+      width: 20em;
     }
   }
   
   @-o-keyframes type {
     to {
-      width: 17em;
+      width: 20em;
     }
   }
   
   @keyframes type {
     to {
-      width: 17em;
+      width: 20em;
     }
   }

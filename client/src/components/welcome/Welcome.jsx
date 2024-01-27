@@ -4,20 +4,21 @@ import "./WelcomeStyle.css"
 
 function Welcome() {
     return (
-        <section id={"Welcome"}  className={"text-bg-dark"}>
+        <section id={"Welcome"}>
             <div className={"container justify-content-center "}>
-                <h1 className={"text-center"}>RecommendAI</h1>
-                <p className={"subHeading text-center pb-5"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
-                <div className={"row"}>
-                    <div className={"col-md-6 d-flex justify-content-center"}>
+
+                <h1 className={"sHeading pb-5 text-center"}>Re-Discover What You Love With Personalized AI Recommendations</h1>
+                <div className={"row text-center"}>
+                    <div className={"col-md-6"}>
                         <DownloadButton brand='google-play'/>
                     </div>
-                    <div className={"col-md-6 d-flex justify-content-center"}>
+                    <div className={"col-md-6"}>
                         <DownloadButton brand='apple'/>
                     </div>
 
+
                 </div>
+
             </div>
 
 

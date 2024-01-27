@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 const openai = new OpenAI({
+
     apiKey: process.env.OPENAI_API,
   });
 
@@ -43,9 +44,9 @@ app.post("/askQuestion", async (req, res) => {
   //const data = {respondMessage: respondMessage}
   const data = {respondMessage: "hello there whats up"}
   res.send(data);
-   
-});
 
+   
+})
 
 
 app.listen(port, ()=>{
