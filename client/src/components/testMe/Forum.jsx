@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import axios from "axios";
 import "./testMeStyle.css"
 
+// animation triggers before added to dom on initial load, must use useeffect or other option.
+// finish overall styling
 
 function Forum() {
 
@@ -75,14 +77,7 @@ function Forum() {
                     <p className="line1">Ask me for a song recommendation</p>
                     <span className="fs-5 fw-normal pb-0">
                     {conversation.map((entry, index) => (
-                        <div key={index} className={` ${entry.type=='response' ? "responseText" : 'userText'}`} 
-                        
-                        style={{
-                            animationDelay: `${index * 1}s`,
-                            // 1 second delay increment per message. Adjust as needed.
-                        }}
-                        
-                            >
+                        <div key={index} className={` ${entry.type=='response' ? "responseText" : 'userText'}`}>
                             
                             {entry.text}
                         
