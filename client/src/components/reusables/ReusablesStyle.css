@@ -1,5 +1,9 @@
+.download-btn{
+    width: 267px;
+    height: 72px;
+    font-size: x-large;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 .download-btn.apple {
     position: relative;
     letter-spacing: .1em;
