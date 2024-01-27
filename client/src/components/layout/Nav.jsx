@@ -10,8 +10,7 @@ function Nav() {
                 <h1 className="mb-0 ml-5 nav-title">RecommendAI</h1>
             </a>
         </nav>
-
-    )
+)
 }
 
 export default Nav
