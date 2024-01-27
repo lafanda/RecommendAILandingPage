@@ -22,9 +22,11 @@ const openai = new OpenAI({
 
 
 app.post("/askQuestion", async (req, res) => {
+
+  /*
+
     const sendMessage = req.body.message;
-  
-  const stream = await openai.chat.completions.create({
+    const stream = await openai.chat.completions.create({
     model: 'gpt-4',
     messages: [{ role: 'user', content: `${sendMessage}` }],
     stream: true,
@@ -37,11 +39,10 @@ app.post("/askQuestion", async (req, res) => {
      //respondMessage = process.stdout.write(chunk.choices[0]?.delta?.content || '');
     
   }
-  const data = {respondMessage: respondMessage}
+  */
+  //const data = {respondMessage: respondMessage}
+  const data = {respondMessage: "hello there whats up"}
   res.send(data);
-
-
-    
    
 });
 
